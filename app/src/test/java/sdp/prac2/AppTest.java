@@ -5,6 +5,26 @@ package sdp.prac2;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.*;
 
 class AppTest {
+
+    @Test void Task2Test() 
+    {
+        // Arrange
+        SimpleFunctions funcBeingTested = new SimpleFunctions();
+        List<String> data1 = Arrays.asList("This", "is", "the", "first", "test", ".");
+        List<String> expected1 = Arrays.asList("his", "s", "he", "irst", "est");
+
+        List<String> data2 = Arrays.asList("This", "is", "a", "dIfferent", "test", ".");
+        List<String> expected2 = Arrays.asList("his","s", "Ifferent", "est");
+
+        // Act
+        List<String> result1 = funcBeingTested.Task2(data1);
+        List<String> result2 = funcBeingTested.Task2(data2);
+
+        // Assert
+        assertIterableEquals(expected1, result1);
+        assertIterableEquals(expected2, result2);
+    }
 }
