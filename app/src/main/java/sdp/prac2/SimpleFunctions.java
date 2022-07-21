@@ -13,5 +13,22 @@ public class SimpleFunctions {
                 sum += a.get(i);
             
         return sum;
-    }   
+    }
+    
+    public static int[] task4(int[] a, int[] b) {
+        int aLen = a.length;
+        int bLen = b.length;
+        int res;
+        if(aLen != bLen) {
+            return null;
+        }
+        else {
+            int[] arr = new int[aLen];
+            for (int i = 0; i < aLen; i++) {
+                res = a[i] * b[bLen - i];
+                arr[i] = res;
+            }
+            return arr;
+        }
+    }
 }
