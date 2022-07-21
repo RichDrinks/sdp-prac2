@@ -13,14 +13,15 @@ class AppTest {
     {
         // Arrange
         SimpleFunctions funcBeingTested = new SimpleFunctions();
-        List<Object> data1 = Arrays.asList("This", "is", "the", "first", "test", ".");
-        List<Object> data2 = Arrays.asList("This", 110, "is", "a ", "  ", "dIfferent", "test", ".", 21.2);
-        List<Object> expected1 = Arrays.asList("his", "s", "he", "irst", "est", "");
-        List<Object> expected2 = Arrays.asList("his", 10 ,"s", " "," ", "Ifferent", "est", "", 1.2);
+        List<String> data1 = Arrays.asList("This", "is", "the", "first", "test", ".");
+        List<String> expected1 = Arrays.asList("his", "s", "he", "irst", "est");
+
+        List<String> data2 = Arrays.asList("This", "is", "a", "dIfferent", "test", ".");
+        List<String> expected2 = Arrays.asList("his","s", "Ifferent", "est");
 
         // Act
-        List<Object> result1 = funcBeingTested.Task2(data1);
-        List<Object> result2 = funcBeingTested.Task2(data2);
+        List<String> result1 = funcBeingTested.Task2(data1);
+        List<String> result2 = funcBeingTested.Task2(data2);
 
         // Assert
         assertIterableEquals(expected1, result1);
