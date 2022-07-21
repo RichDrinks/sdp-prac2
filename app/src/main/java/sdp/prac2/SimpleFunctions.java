@@ -5,7 +5,7 @@ import java.util.*;
 public class SimpleFunctions {
     public SimpleFunctions() {}
 
-    public static int Task1(List<Integer> a, List<Integer> b) //Added by Richard g20d3020
+    public int Task1(List<Integer> a, List<Integer> b) //Added by Richard g20d3020
     {
         int sum = 0;
         for (Integer i : b)
