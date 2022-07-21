@@ -15,20 +15,21 @@ public class SimpleFunctions {
         return sum;
     }
     
-    public static int[] task4(int[] a, int[] b) {
-        int aLen = a.length;
-        int bLen = b.length;
+    public List<Integer> Task4(List<Integer> a, List<Integer> b) {
+        int aLen = a.size();
+        int bLen = b.size();
         int res;
+        List<Integer> arr = new ArrayList<Integer>();
         if(aLen != bLen) {
             return null;
         }
         else {
-            int[] arr = new int[aLen];
+            
             for (int i = 0; i < aLen; i++) {
-                res = a[i] * b[bLen - i];
-                arr[i] = res;
-            }
-            return arr;
+                res = a.get(i) * b.get(bLen - i);
+                arr.add(res);
+            }  
         }
+        return arr;
     }
 }
